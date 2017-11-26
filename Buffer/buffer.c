@@ -57,10 +57,8 @@ buffer_result_t buffer_pop(buffer_t *buffer) {
     } else if (buffer_state(buffer) == BUFFER_READ) {
         buffer->head = 0;
         (&result)->data = buffer->data[buffer->head++];
-        --buffer->tail;
     } else {
         (&result)->data = buffer->data[buffer->head++];
-        --buffer->tail;
     }
     
     return result;
