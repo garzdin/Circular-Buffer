@@ -20,9 +20,14 @@ void run() {
     assert((&buffer)->tail == 0);
     assert((&buffer)->size == 2);
     
-    buffer_push(&buffer, 'A');
-    buffer_push(&buffer, 'T');
-    buffer_push(&buffer, '+');
+    buffer_return_t el_1_p = buffer_push(&buffer, 'A');
+    assert(el_1_p == BUFFER_SUCCESS);
+    
+    buffer_return_t el_2_p = buffer_push(&buffer, 'T');
+    assert(el_2_p == BUFFER_SUCCESS);
+    
+    buffer_return_t el_3_p = buffer_push(&buffer, '+');
+    assert(el_3_p == BUFFER_SUCCESS);
     
     buffer_result_t el_1 = buffer_pop(&buffer);
     buffer_result_t el_2 = buffer_pop(&buffer);
@@ -37,7 +42,8 @@ void run() {
     assert((&el_3)->ret == BUFFER_SUCCESS);
     assert((&el_3)->data == (buffer_el_t) '+');
     
-    buffer_push(&buffer, '\r');
+    buffer_return_t el_4_p = buffer_push(&buffer, '\r');
+    assert(el_4_p == BUFFER_SUCCESS);
     
     buffer_result_t el_4 = buffer_pop(&buffer);
 
