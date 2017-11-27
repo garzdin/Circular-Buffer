@@ -12,13 +12,13 @@
 buffer_t buffer;
 
 void setup() {
-    buffer = buffer_init(2);
+    buffer = buffer_init(8);
 }
 
 void run() {
     assert((&buffer)->head == 0);
     assert((&buffer)->tail == 0);
-    assert((&buffer)->size == 2);
+    assert((&buffer)->size == 8);
     
     buffer_return_t el_1_p = buffer_push(&buffer, 'A');
     assert(el_1_p == BUFFER_SUCCESS);
@@ -51,7 +51,12 @@ void run() {
     assert((&el_4)->data == (buffer_el_t) '\r');
 }
 
+void cleanup() {
+    buffer_free(&buffer);
+}
+
 void test() {
     setup();
     run();
+    cleanup();
 }

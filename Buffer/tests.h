@@ -12,5 +12,6 @@
 void setup(void);
 void run(void);
 void test(void);
+void cleanup(void);
 
 #endif /* tests_h */
