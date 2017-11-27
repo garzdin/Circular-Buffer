@@ -6,8 +6,7 @@
 //  Copyright © 2017 Teodor Garzdin. All rights reserved.
 //
 
-#include <assert.h>
-#include "buffer.h"
+#include "tests.h"
 
 buffer_t buffer;
 

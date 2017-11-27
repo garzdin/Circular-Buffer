@@ -6,8 +6,6 @@
 //  Copyright © 2017 Teodor Garzdin. All rights reserved.
 //
 
-#include <stdio.h>
-#include "buffer.h"
 #include "tests.h"
 
 int main(int argc, const char * argv[]) {

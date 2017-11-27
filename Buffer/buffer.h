@@ -10,7 +10,6 @@
 #define buffer_h
 
 #include <stdlib.h>
-#include <stdio.h>
 
 #define BUFFER_DEFAULT_SIZE 8
 

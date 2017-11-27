@@ -9,6 +9,9 @@
 #ifndef tests_h
 #define tests_h
 
+#include <assert.h>
+#include "buffer.h"
+
 void setup(void);
 void run(void);
 void test(void);
